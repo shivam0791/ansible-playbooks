@@ -1,0 +1,9 @@
+---
+  - name: Download Jre7
+    get_url: url=http://192.168.126.99:8087/repository/tools/jre-7u80-linux-x64.tar.gz dest=/opt/jre-7u80-linux-x64.tar.gz
+
+  - name: Extract archive
+    unarchive: dest=/opt/ src=/opt/jre-7u80-linux-x64.tar.gz  copy=no
+  - name: set   jre home
+    shell: export JAVA_HOME=/opt/jre1.7.0_80
+

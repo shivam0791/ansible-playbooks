@@ -1,0 +1,9 @@
+---
+- name: instal unzip
+  yum:  name=unzip state=present
+- name: Download Jboss 4
+  get_url: url=http://192.168.126.99:8087/repository/tools/jboss-4.2.3.GA-jdk6.zip dest=/tmp
+
+- name: Extract archive
+  unarchive: src=/tmp/jboss-4.2.3.GA-jdk6.zip dest=/home/lms remote_src=True
+
